@@ -21,4 +21,7 @@ public class MataKuliah01 {
             System.out.println("pengurangan tidak dapat dilakukan!");
         }
     }
+    public MataKuliah01() {
+
+    }
 }
