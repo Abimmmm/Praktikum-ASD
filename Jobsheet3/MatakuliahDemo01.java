@@ -15,7 +15,7 @@ public class MatakuliahDemo01 {
         }
 
         for (Matakuliah01 matakuliah01 : arrayMatakuliah01) {
-            matakuliah01.tampilData();
+            matakuliah01.cetakInfo();
         }
 
 
