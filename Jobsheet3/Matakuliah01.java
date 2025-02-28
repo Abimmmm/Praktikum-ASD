@@ -27,7 +27,7 @@ public class Matakuliah01 {
         jumlahJam = Integer.parseInt(dummy);
         System.out.println("----------------------------------");
     }
-    public void tampilData(){
+    public void cetakInfo(){
         System.out.println("=== Data Matakuliah ====");
         System.out.println("Kode       : " + kode);
         System.out.println("Nama       : " + nama);
