@@ -63,14 +63,32 @@ public class Dosen01 {
         System.out.println("Jumlah Dosen Wanita : " + jumlahWanita);
     }
     public static void rerataUsiaDosenPerJenisKelamin(Dosen01[] arrayDosen){
-        int total = 0, jumlahDosen = arrayDosen.length;
-
-        for (Dosen01 dosen01 : arrayDosen) {
-            total += dosen01.usia;
+        int totalPria = 0, jumlahPria = 0;
+        int totalWanita = 0, jumlahWanita = 0;
+    
+        for (Dosen01 dosen : arrayDosen) {
+            if (dosen.jenisKelamin) {
+                totalPria += dosen.usia;
+                jumlahPria++;
+            } else { 
+                totalWanita += dosen.usia;
+                jumlahWanita++;
+            }
         }
-
-        double rataRata = (double) total/jumlahDosen;
-        System.out.println("Rata-rata Usia Dosen : " + rataRata);
+    
+        if (jumlahPria > 0) {
+            double rataRataPria = (double) totalPria / jumlahPria;
+            System.out.println("Rata-rata Usia Dosen Pria   : " + rataRataPria);
+        } else {
+            System.out.println("Tidak ada Dosen Pria.");
+        }
+    
+        if (jumlahWanita > 0) {
+            double rataRataWanita = (double) totalWanita / jumlahWanita;
+            System.out.println("Rata-rata Usia Dosen Wanita : " + rataRataWanita);
+        } else {
+            System.out.println("Tidak ada Dosen Wanita.");
+        }
     }
     public static void infoDosenPalingTua(Dosen01[] arrayDosen){
         Dosen01 dosenPalingTua = arrayDosen[0];
@@ -106,4 +124,5 @@ public class Dosen01 {
         }
         System.out.println("Usia          : " + dosenPalingMuda.usia);
     }
+
 }
