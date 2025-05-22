@@ -3,7 +3,7 @@ public class StackKonversi01 {
     int size;
     int top;
 
-    public StackKonversi01(int size) {
+    public StackKonversi01() {
         this.size = 32;
         tumpukanBiner = new int[size];
         top = -1;
@@ -22,7 +22,7 @@ public class StackKonversi01 {
             System.out.println("Stack penuh");
         } else {
             top++;
-            tumpukanBiner[++top] = data;
+            tumpukanBiner[top] = data;
         }
     }
 
