@@ -44,34 +44,6 @@ public class StackSurat01 {
             return null;
         }
     }
-    public Surat01 peekBottom() {
-        if (!isEmpty()) {
-            return stack[0];
-        } else {
-            System.out.println("Stack kosong! Tidak ada surat yang tersimpan.");
-            return null;
-        }
-    }
-
-    public void print() {
-        System.out.println("\nDaftar Surat Izin (Terbaru ke Terlama):");
-        System.out.println("===========================================");
-        System.out.println("ID Surat\tNama Mahasiswa\tKelas\tJenis Izin\tDurasi");
-        System.out.println("-------------------------------------------");
-        
-        for (int i = top; i >= 0; i--) {
-            Surat01 s = stack[i];
-            System.out.println(s.idSurat + "\t" + s.namaMahasiswa + "\t" + 
-                             s.kelas + "\t" + (s.jenisIzin == 'S' ? "Sakit" : "Izin") + 
-                             "\t" + s.durasi + " hari");
-        }
-        
-        System.out.println("===========================================\n");
-    }
-
-    public int count() {
-        return top + 1;
-    }
     public int cariBerdasarkanNama(String nama) {
     for (int i = top; i >= 0; i--) {
         if (stack[i].namaMahasiswa.equalsIgnoreCase(nama)) {
