@@ -45,22 +45,20 @@ public class StackSurat01 {
         }
     }
     public int cariBerdasarkanNama(String nama) {
-    for (int i = top; i >= 0; i--) {
-        if (stack[i].namaMahasiswa.equalsIgnoreCase(nama)) {
-            tampilSuratDitemukan(nama, i);
-            return i;
+        for (int i = top; i >= 0; i--) {
+            if (stack[i].namaMahasiswa.equalsIgnoreCase(nama)) {
+                tampilSuratDitemukan(nama, i);
+                return i;
+            }
         }
+        tampilSuratTidakDitemukan(nama);
+        return -1;
     }
-    tampilSuratTidakDitemukan(nama);
-    return -1;
-}
 
-public void tampilSuratDitemukan(String nama, int pos) {
-    System.out.println("Surat ditemukan:");
-    System.out.println("ID: " + stack[pos].idSurat + " | Nama: " + stack[pos].namaMahasiswa + " | Kelas: " + stack[pos].kelas +" | Izin: " + (stack[pos].jenisIzin == 'S' ? "Sakit" : "Lain") + " | Durasi: " + stack[pos].durasi + " hari");
-}
+    public void tampilSuratDitemukan(String nama, int pos) {
+        System.out.println("Surat ditemukan:");
+        System.out.println("ID: " + stack[pos].idSurat + " | Nama: " + stack[pos].namaMahasiswa + " | Kelas: " + stack[pos].kelas +" | Izin: " + (stack[pos].jenisIzin == 'S' ? "Sakit" : "Lain") + " | Durasi: " + stack[pos].durasi + " hari");
+    }
 
-public void tampilSuratTidakDitemukan(String nama) {
-    System.out.println("Surat atas nama " + nama + " tidak ditemukan");
-}
+
 }
