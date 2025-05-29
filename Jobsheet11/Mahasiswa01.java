@@ -6,7 +6,7 @@ public class Mahasiswa01 {
 
     }
     
-    public Mahasiswa01(String nim, String nama, String kelas, double ipk) {
+    public Mahasiswa01(String nama, String nim, String kelas, double ipk) {
         this.nim = nim;
         this.nama = nama;
         this.kelas = kelas;
@@ -14,6 +14,6 @@ public class Mahasiswa01 {
     }
 
     public void tampilInformasi() {
-        System.out.println(nim + " - " + nama + " - " + kelas + " - " + ipk);
+        System.out.println(nama + " - " + nim + " - " + kelas + " - " + ipk);
     }
 }
