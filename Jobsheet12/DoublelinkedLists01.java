@@ -81,8 +81,10 @@ public class DoublelinkedLists01 {
             return;
         }
         if (head == tail) {
+            System.out.println("Data sudah berhasil dihapus. Data yang terhapus adalah " + head.data.nama);
             head = tail = null;
         }else {
+            System.out.println("Data sudah berhasil dihapus. Data yang terhapus adalah " + head.data.nama);
             head = head.next;
             head.prev = null;
         }
@@ -93,10 +95,12 @@ public class DoublelinkedLists01 {
             return;
         }
         if (head == tail) {
+            System.out.println("Data sudah berhasil dihapus. Data yang terhapus adalah " + tail.data.nama);
             head = tail = null;
         }else {
-            tail = tail.next;
-            tail.prev = null;
+            System.out.println("Data sudah berhasil dihapus. Data yang terhapus adalah " + tail.data.nama);
+            tail = tail.prev;
+            tail.next = null;
         }
     }
      public void addAt(int index, Mahasiswa01 data) {
